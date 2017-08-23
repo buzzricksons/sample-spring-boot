@@ -29,7 +29,7 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile("org.mybatis.spring.boot:mybatis-spring-boot-starter:2.0.0-SNAPSHOT")
 	compile("org.flywaydb:flyway-core:4.2.0")
-	compile("org.mybatis.spring.boot:mybatis-spring-boot-starter:2.0.0-SNAPSHOT")
+	compile group: 'com.zaxxer', name: 'HikariCP', version: '2.6.3'
 	runtime('org.springframework.boot:spring-boot-devtools')
 	runtime('org.postgresql:postgresql')
 	compileOnly('org.projectlombok:lombok')

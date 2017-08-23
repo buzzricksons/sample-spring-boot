@@ -1,0 +1,7 @@
+CREATE TABLE YODA
+(
+    SERIAL varchar(100) NOT NULL,
+    ID varchar(50) NOT NULL,
+    NAME varchar(200) NOT NULL,
+    CONSTRAINT YODA_PK PRIMARY KEY (SERIAL)
+);

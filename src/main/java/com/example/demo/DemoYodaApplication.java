@@ -5,8 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class DemoYodaApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(DemoYodaApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(DemoYodaApplication.class, args);
+    }
 }

@@ -1,7 +1,10 @@
-CREATE TABLE YODA
-(
-    SERIAL varchar(100) NOT NULL,
-    ID varchar(50) NOT NULL,
-    NAME varchar(200) NOT NULL,
-    CONSTRAINT YODA_PK PRIMARY KEY (SERIAL)
+DROP TABLE IF EXISTS CITY;
+CREATE TABLE CITY (
+    id SERIAL,
+    name VARCHAR(255),
+    state VARCHAR(255),
+    country VARCHAR(255),
+    CONSTRAINT CITY_PK PRIMARY KEY (id)
 );
+
+INSERT INTO city (name, state, country) VALUES ('San Francisco', 'CA', 'US');

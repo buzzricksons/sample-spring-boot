@@ -38,8 +38,9 @@ interface CityMapperGroovy {
     City findByCountry(String country)
 
     @Insert('''
-            INSERT INTO 
-
+            INSERT INTO
+                TCITY (name, state, country)
+                VALUES (#{name}, #{state}, #{country})
     ''')
     int insert(City city)
 }

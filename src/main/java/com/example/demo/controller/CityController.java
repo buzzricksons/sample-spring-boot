@@ -1,8 +1,8 @@
 package com.example.demo.controller;
 
 import com.example.demo.City;
-import com.example.demo.mapper.CityMapperJava;
 import com.example.demo.mapper.CityMapperGroovy;
+import com.example.demo.mapper.CityMapperJava;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,7 +20,7 @@ public class CityController {
     @Autowired
     private SqlSession sqlSession;
 
-    @RequestMapping("/")
+    @RequestMapping("/test")
     public String index() {
         City city1 = cityMapper.findByState("CA");
         System.out.println(city1.getCountry());

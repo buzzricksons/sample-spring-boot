@@ -1,6 +1,7 @@
 package com.example.demo.mapper
 
 import com.example.demo.City
+import org.apache.ibatis.annotations.Insert
 import org.apache.ibatis.annotations.Mapper
 import org.apache.ibatis.annotations.Select
 
@@ -35,4 +36,10 @@ interface CityMapperGroovy {
                 country = #{country}
     ''')
     City findByCountry(String country)
+
+    @Insert('''
+            INSERT INTO 
+
+    ''')
+    int insert(City city)
 }

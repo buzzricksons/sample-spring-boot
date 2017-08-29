@@ -10,7 +10,7 @@ public interface CityMapperJava {
             "SELECT" +
             " id, name, state, country " +
             "FROM " +
-            "city " +
+            "tcity " +
             "WHERE " +
             "state = #{state}" +
             "")

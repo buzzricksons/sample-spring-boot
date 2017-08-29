@@ -32,7 +32,7 @@ dependencies {
 	compile('com.h2database:h2:1.4.191')
 	compile group: 'com.zaxxer', name: 'HikariCP', version: '2.6.3'
 	runtime('org.springframework.boot:spring-boot-devtools')
-	runtime('org.postgresql:postgresql')
+//	runtime('org.postgresql:postgresql')
 	compileOnly('org.projectlombok:lombok')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	testCompile('org.springframework.security:spring-security-test')

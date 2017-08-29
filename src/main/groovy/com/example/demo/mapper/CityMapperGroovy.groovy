@@ -11,7 +11,7 @@ interface CityMapperGroovy {
             SELECT 
                 id, name, state, country 
             FROM 
-                city 
+                tcity 
             WHERE 
                 state = #{state}
     ''')
@@ -21,7 +21,7 @@ interface CityMapperGroovy {
             SELECT 
                 id, name, state, country 
             FROM 
-                city 
+                tcity 
             WHERE 
                 name = #{name}
     ''')
@@ -31,7 +31,7 @@ interface CityMapperGroovy {
             SELECT 
                 id, name, state, country 
             FROM 
-                city 
+                tcity 
             WHERE 
                 country = #{country}
     ''')
@@ -39,8 +39,8 @@ interface CityMapperGroovy {
 
     @Insert('''
             INSERT INTO
-                TCITY (name, state, country)
-                VALUES (#{name}, #{state}, #{country})
+                tcity (name, state, country)
+                values (#{name}, #{state}, #{country})
     ''')
     int insert(City city)
 }

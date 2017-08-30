@@ -31,7 +31,7 @@ interface CityMapperGroovy {
             SELECT 
                 id, name, state, country 
             FROM 
-                tcity 
+                tcity
             WHERE 
                 country = #{country}
     ''')

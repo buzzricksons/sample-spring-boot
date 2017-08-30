@@ -29,6 +29,9 @@ public class CityController {
         City city2 = cityMapperGroovy.findByState("CA");
         System.out.println(city2.getCountry());
 
-        return "Greetings from Spring Boot!";
+        cityMapperGroovy.insert(City.builder().name("Tokyo").state("Minato-ku").country("Japan").build());
+        System.out.println(cityMapperGroovy.findByCountry("Japan").getCountry());
+
+        return "Greetings from Spring Boot!a";
     }
 }

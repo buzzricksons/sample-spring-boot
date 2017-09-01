@@ -35,7 +35,7 @@ interface CityMapperGroovy {
             WHERE 
                 country = #{country}
     ''')
-    City findByCountry(String country)
+    List<City> findByCountry(String country)
 
     @Insert('''
             INSERT INTO

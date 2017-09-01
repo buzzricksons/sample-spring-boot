@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class CityController {
 
+    @Deprecated
     @Autowired
     private CityMapperJava cityMapper;
 
@@ -30,8 +31,9 @@ public class CityController {
         System.out.println(city2.getCountry());
 
         cityMapperGroovy.insert(City.builder().name("Tokyo").state("Minato-ku").country("Japan").build());
-        System.out.println(cityMapperGroovy.findByCountry("Japan").getCountry());
+        System.out.println(cityMapperGroovy.findByCountry("Japan").get(0).getCountry());
+        System.out.println(cityMapperGroovy.findByCountry("Japan").size());
 
-        return "Greetings from Spring Boot!a";
+        return "Greetings from Spring Boot!";
     }
 }

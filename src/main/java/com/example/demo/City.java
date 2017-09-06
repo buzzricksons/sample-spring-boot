@@ -8,7 +8,7 @@ import lombok.*;
 @Builder
 public class City {
     @NonNull
-    private int id;
+    private String id;
     @NonNull
     private String name;
     @NonNull

@@ -1,17 +1,19 @@
 package com.example.demo.mapper
 
 import com.example.demo.City
+import org.apache.ibatis.annotations.Delete
 import org.apache.ibatis.annotations.Insert
 import org.apache.ibatis.annotations.Mapper
 import org.apache.ibatis.annotations.Select
+import org.apache.ibatis.annotations.Update
 
 @Mapper
 interface CityMapperGroovy {
     //CREATE
     @Insert('''
             INSERT INTO
-                tcity (name, state, country)
-                values (#{name}, #{state}, #{country})
+                tcity (code, name, state, country)
+                values (#{code}, #{name}, #{state}, #{country})
     ''')
     int insert(City city)
 
@@ -19,32 +21,33 @@ interface CityMapperGroovy {
     //READ
     @Select('''
             SELECT 
-                id, name, state, country 
+                code, name, state, country 
             FROM 
-                tcity 
+                tcity
             WHERE 
-                state = #{state}
+                code = #{code}
     ''')
-    City findByState(String state)
+    City findByCode(String code)
 
-    @Select('''
-            SELECT 
-                id, name, state, country 
+    //UPDATE
+    @Update('''
+            UPDATE
+                tcity
+            SET
+                name = #{name}
+            WHERE
+                code = #{code}
+    ''')
+    City updateNamebyCode(String code, String name)
+
+
+    //DELETE
+    @Delete('''
+            DELETE
             FROM
                 tcity
             WHERE
-                name = #{name}
+                code = #{code}
     ''')
-    City findByName(String name)
-
-    @Select('''
-            SELECT 
-                id, name, state, country 
-            FROM 
-                tcity
-            WHERE 
-                country = #{country}
-    ''')
-    List<City> findByCountry(String country)
-
+    void deleteByCode(String code)
 }

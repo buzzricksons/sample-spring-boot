@@ -7,6 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDate;
+import java.util.Random;
+import java.util.UUID;
+
 @RestController
 public class CityController {
 
@@ -18,16 +22,29 @@ public class CityController {
 
     @RequestMapping("/test")
     public String index() {
-        City city1 = cityMapperGroovy.findByState("CA");
-        System.out.println(city1.getCountry());
+        String id = UUID.randomUUID().toString();
+
+        //Create
+        cityMapperGroovy.insert(City.builder().id(id).name("Tokyo").state("Minato-ku").country("Japan").build());
+//        System.out.println("CREATE: "+cityMapperGroovy.findByCode(id));
+//
+//
+//        //Read
+//        City city = cityMapperGroovy.findByCode(id);
+//        System.out.println("READ: "+city.toString());
+//
+//
+//        //Update
+//        System.out.println("UPDATE: "+cityMapperGroovy.findByCode(id));
+//        cityMapperGroovy.updateNamebyCode(id, "luke");
+//        System.out.println("UPDATE: "+cityMapperGroovy.findByCode(id));
+//
+//
+//        //Delete
+//        cityMapperGroovy.deleteByCode(id);
+//        System.out.println("DELETE: "+cityMapperGroovy.findByCode(id));
 
 
-        City city2 = cityMapperGroovy.findByState("CA");
-        System.out.println(city2.getCountry());
-
-        cityMapperGroovy.insert(City.builder().name("Tokyo").state("Minato-ku").country("Japan").build());
-        System.out.println(cityMapperGroovy.findByCountry("Japan").get(0).getCountry());
-        System.out.println(cityMapperGroovy.findByCountry("Japan").size());
 
         return "Greetings from Spring Boot!";
     }

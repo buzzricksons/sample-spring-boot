@@ -7,6 +7,16 @@ import org.apache.ibatis.annotations.Select
 
 @Mapper
 interface CityMapperGroovy {
+    //CREATE
+    @Insert('''
+            INSERT INTO
+                tcity (name, state, country)
+                values (#{name}, #{state}, #{country})
+    ''')
+    int insert(City city)
+
+
+    //READ
     @Select('''
             SELECT 
                 id, name, state, country 
@@ -20,9 +30,9 @@ interface CityMapperGroovy {
     @Select('''
             SELECT 
                 id, name, state, country 
-            FROM 
-                tcity 
-            WHERE 
+            FROM
+                tcity
+            WHERE
                 name = #{name}
     ''')
     City findByName(String name)
@@ -37,10 +47,4 @@ interface CityMapperGroovy {
     ''')
     List<City> findByCountry(String country)
 
-    @Insert('''
-            INSERT INTO
-                tcity (name, state, country)
-                values (#{name}, #{state}, #{country})
-    ''')
-    int insert(City city)
 }

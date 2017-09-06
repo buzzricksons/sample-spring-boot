@@ -16,7 +16,7 @@ import javax.sql.DataSource;
 
 @Configuration
 @EnableTransactionManagement
-@MapperScan("com.example.demo")
+@MapperScan("com.example.demo.mapper")
 @ComponentScan("com.example.demo")
 public class SetupApplicationPersistenceConfig {
 
@@ -40,5 +40,4 @@ public class SetupApplicationPersistenceConfig {
      public SqlSession sqlSessionTemplate() throws Exception {
          return new SqlSessionTemplate(sqlSessionFactory());
      }
-
 }

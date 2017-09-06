@@ -2,7 +2,6 @@ package com.example.demo.controller;
 
 import com.example.demo.City;
 import com.example.demo.mapper.CityMapperGroovy;
-import com.example.demo.mapper.CityMapperJava;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,10 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class CityController {
-
-    @Deprecated
-    @Autowired
-    private CityMapperJava cityMapper;
 
     @Autowired
     private CityMapperGroovy cityMapperGroovy;
@@ -23,7 +18,7 @@ public class CityController {
 
     @RequestMapping("/test")
     public String index() {
-        City city1 = cityMapper.findByState("CA");
+        City city1 = cityMapperGroovy.findByState("CA");
         System.out.println(city1.getCountry());
 
 

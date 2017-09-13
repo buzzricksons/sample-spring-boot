@@ -25,8 +25,8 @@ public class CityController {
         String id = UUID.randomUUID().toString();
 
         //Create
-        cityMapperGroovy.insert(City.builder().id(id).name("Tokyo").state("Minato-ku").country("Japan").build());
-//        System.out.println("CREATE: "+cityMapperGroovy.findByCode(id));
+        cityMapperGroovy.insert(City.builder().code(id).name("Tokyo").state("Minato-ku").country("Japan").build());
+        System.out.println("CREATE: "+cityMapperGroovy.findByCode(id));
 //
 //
 //        //Read
@@ -46,6 +46,6 @@ public class CityController {
 
 
 
-        return "Greetings from Spring Boot!";
+        return "Greetings from Spring Boot!555arrr144111";
     }
 }

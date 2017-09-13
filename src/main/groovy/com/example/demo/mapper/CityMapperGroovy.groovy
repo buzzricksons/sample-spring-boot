@@ -28,7 +28,7 @@ interface CityMapperGroovy {
             WHERE 
                 code = #{code}
     ''')
-    City findByCode(String code)
+    City findByCode(@Param("code") String code)
 
     //UPDATE
     @Update('''

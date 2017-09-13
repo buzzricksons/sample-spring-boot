@@ -2,14 +2,11 @@ package com.example.demo.controller;
 
 import com.example.demo.City;
 import com.example.demo.mapper.CityMapperGroovy;
-import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.time.LocalDate;
-import java.util.Random;
 import java.util.UUID;
 
 @RestController
@@ -37,7 +34,7 @@ public class CityController {
 
         //Update
         System.out.println("UPDATE Before: "+cityMapperGroovy.findByCode(code));
-        cityMapperGroovy.updateNamebyCode(code, "Osaka");
+        cityMapperGroovy.updateNameByCode(code, "Osaka");
         System.out.println("UPDATE After: "+cityMapperGroovy.findByCode(code));
 
 

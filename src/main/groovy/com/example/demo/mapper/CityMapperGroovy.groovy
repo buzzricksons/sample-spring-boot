@@ -39,7 +39,7 @@ interface CityMapperGroovy {
             WHERE
                 code = #{code}
     ''')
-    int updateNamebyCode(@Param("code") String code, @Param("name") String name)
+    int updateNameByCode(@Param("code") String code, @Param("name") String name)
 
 
     //DELETE

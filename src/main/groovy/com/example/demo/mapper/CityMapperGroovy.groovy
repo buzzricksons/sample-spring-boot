@@ -4,6 +4,7 @@ import com.example.demo.City
 import org.apache.ibatis.annotations.Delete
 import org.apache.ibatis.annotations.Insert
 import org.apache.ibatis.annotations.Mapper
+import org.apache.ibatis.annotations.Param
 import org.apache.ibatis.annotations.Select
 import org.apache.ibatis.annotations.Update
 
@@ -38,7 +39,7 @@ interface CityMapperGroovy {
             WHERE
                 code = #{code}
     ''')
-    City updateNamebyCode(String code, String name)
+    int updateNamebyCode(@Param("code") String code, @Param("name") String name)
 
 
     //DELETE
@@ -49,5 +50,5 @@ interface CityMapperGroovy {
             WHERE
                 code = #{code}
     ''')
-    void deleteByCode(String code)
+    int deleteByCode(@Param("code") String code)
 }

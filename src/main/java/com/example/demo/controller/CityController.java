@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.City;
 import com.example.demo.mapper.CityMapperGroovy;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,27 +23,27 @@ public class CityController {
 
     @RequestMapping("/test")
     public String index() {
-        String id = UUID.randomUUID().toString();
+        String code = UUID.randomUUID().toString();
 
         //Create
-        cityMapperGroovy.insert(City.builder().code(id).name("Tokyo").state("Minato-ku").country("Japan").build());
-        System.out.println("CREATE: "+cityMapperGroovy.findByCode(id));
-//
-//
-//        //Read
-//        City city = cityMapperGroovy.findByCode(id);
-//        System.out.println("READ: "+city.toString());
-//
-//
-//        //Update
-//        System.out.println("UPDATE: "+cityMapperGroovy.findByCode(id));
-//        cityMapperGroovy.updateNamebyCode(id, "luke");
-//        System.out.println("UPDATE: "+cityMapperGroovy.findByCode(id));
-//
-//
-//        //Delete
-//        cityMapperGroovy.deleteByCode(id);
-//        System.out.println("DELETE: "+cityMapperGroovy.findByCode(id));
+        cityMapperGroovy.insert(City.builder().code(code).name("Tokyo").state("Minato-ku").country("Japan").build());
+        System.out.println("CREATE: "+cityMapperGroovy.findByCode(code));
+
+
+        //Read
+        City city = cityMapperGroovy.findByCode(code);
+        System.out.println("READ: "+city.toString());
+
+
+        //Update
+        System.out.println("UPDATE Before: "+cityMapperGroovy.findByCode(code));
+        cityMapperGroovy.updateNamebyCode(code, "Osaka");
+        System.out.println("UPDATE After: "+cityMapperGroovy.findByCode(code));
+
+
+        //Delete
+//        cityMapperGroovy.deleteByCode(code);
+        System.out.println("DELETE: "+cityMapperGroovy.deleteByCode(code));
 
 
 

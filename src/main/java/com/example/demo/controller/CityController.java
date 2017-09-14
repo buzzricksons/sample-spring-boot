@@ -18,8 +18,13 @@ public class CityController {
     @Autowired
     private SqlSession sqlSession;
 
-    @RequestMapping("/test")
+    @RequestMapping("/")
     public String index() {
+        return "Application  Works!";
+    }
+
+    @RequestMapping("/test")
+    public String test() {
         String code = UUID.randomUUID().toString();
 
         //Create

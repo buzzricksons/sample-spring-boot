@@ -12,19 +12,23 @@ import java.util.UUID;
 @RestController
 public class CityController {
 
-    @Autowired
-    private CityMapperGroovy cityMapperGroovy;
+//    @Autowired
+//    private CityMapperGroovy cityMapperGroovy;
 
     @Autowired
     private SqlSession sqlSession;
 
     @RequestMapping("/")
     public String index() {
-        return "Application  Works!";
+        return "Application Works!";
     }
 
     @RequestMapping("/test")
     public String test() {
+
+        CityMapperGroovy cityMapperGroovy = sqlSession.getMapper(CityMapperGroovy.class);
+
+
         String code = UUID.randomUUID().toString();
 
         //Create

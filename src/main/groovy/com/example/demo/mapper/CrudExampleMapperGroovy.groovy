@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Bean
 
 
 @Mapper
-interface CityMapperGroovy {
+interface CrudExampleMapperGroovy {
     //CREATE
     @Insert('''
             INSERT INTO

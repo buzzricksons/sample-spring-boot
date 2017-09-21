@@ -5,7 +5,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
 @Mapper
-public interface CityMapperJava {
+public interface CrudExampleMapperJava {
     @Select("" +
             "SELECT" +
             " id, name, state, country " +

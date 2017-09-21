@@ -4,6 +4,7 @@ import com.example.demo.City;
 import com.example.demo.mapper.CrudExampleMapperGroovy;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,6 +22,7 @@ public class CrudExampleController {
         return "Application Works!";
     }
 
+    @Transactional
     @RequestMapping("/crud")
     public String example() {
         CrudExampleMapperGroovy crudExampleMapperGroovy = sqlSession.getMapper(CrudExampleMapperGroovy.class);
@@ -40,8 +42,8 @@ public class CrudExampleController {
         System.out.println("UPDATE After: "+ crudExampleMapperGroovy.findByCode(code));
 
         //Delete
-        System.out.println("DELETE: "+ crudExampleMapperGroovy.deleteByCode(code));
+//        System.out.println("DELETE: "+ crudExampleMapperGroovy.deleteByCode(code));
 
-        return "crud success!";
+        return "CRUD success!";
     }
 }

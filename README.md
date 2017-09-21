@@ -1,6 +1,8 @@
 # spring-boot-sample-yoda
-Spring boot sample
+My spring boot sample
 
 ## ORM
+- Mybatis + Groovy Mapper
+
 ## AOP
 ## BATCH

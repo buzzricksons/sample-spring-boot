@@ -1,8 +1,10 @@
 # spring-boot-sample-yoda
-My spring boot sample
+spring boot sample for study.
 
 ## ORM
 - Mybatis + Groovy Mapper
 
 ## AOP
 ## BATCH
+## ETC
+### Flyway db migration

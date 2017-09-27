@@ -7,4 +7,4 @@ spring boot sample for study.
 ## AOP
 ## BATCH
 ## ETC
-### Flyway db migration
+- Flyway db migration

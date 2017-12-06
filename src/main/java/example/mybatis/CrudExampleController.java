@@ -1,9 +1,9 @@
-package com.example.demo.controller;
+package example.mybatis;
 
-import com.example.demo.City;
-import com.example.demo.mapper.CrudExampleMapperGroovy;
-import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import example_data.mapper.CrudExampleMapperGroovy;
+import org.apache.ibatis.session.SqlSession;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

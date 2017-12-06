@@ -1,4 +1,4 @@
-package com.example.demo.config;
+package example.mybatis;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;

@@ -1,6 +1,6 @@
-package com.example.demo.mapper;
+package example.mybatis;
 
-import com.example.demo.City;
+import example.mybatis.City;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 

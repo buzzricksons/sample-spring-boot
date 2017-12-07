@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/crud")
 public class CrudExampleController {
     @Autowired
     private SqlSession sqlSession;
 
+    @RequestMapping("/crud")
     @Transactional
     public String example() {
         CrudExampleMapperJava crudExampleMapperJava = sqlSession.getMapper(CrudExampleMapperJava.class);
@@ -35,7 +35,7 @@ public class CrudExampleController {
         System.out.println("UPDATE After: "+ crudExampleMapperJava.findByCode(code));
 
         //Delete
-        System.out.println("DELETE: "+ crudExampleMapperJava.deleteByCode(code));
+//        System.out.println("DELETE: "+ crudExampleMapperJava.deleteByCode(code));
 
         return "CRUD success!";
     }

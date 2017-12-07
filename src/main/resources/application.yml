@@ -21,3 +21,9 @@ spring:
 
 thymeleaf:
   cache: false
+
+
+# For security example
+security:
+  id: foo
+  pw: bar

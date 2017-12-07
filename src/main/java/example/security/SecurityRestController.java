@@ -9,6 +9,6 @@ import javax.servlet.http.HttpSession;
 public class SecurityRestController {
     @RequestMapping("/secret")
     public String secret(HttpSession session) {
-        return "Secret!";
+        return "Secret Example!";
     }
 }

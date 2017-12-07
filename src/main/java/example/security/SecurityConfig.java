@@ -21,7 +21,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private String pw;
 
     /**
-     * Set Basic authentification ID and PW.
+     * Set Basic authentication ID and PW.
      * ID and PW are security.id &security.pw of resources/application.yml file.
      * @param authenticationManagerBuilder
      * @throws Exception
@@ -35,7 +35,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     /**
-     * Set end point for basic authentification.
+     * Set end point for basic authentication.
      * At this time, end point is {@code /secret}.
      *
      * @param http

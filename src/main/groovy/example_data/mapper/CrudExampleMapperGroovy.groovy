@@ -1,6 +1,6 @@
 package example_data.mapper
 
-import example.mybatis.City
+import example.mybatis.mapper.data.City
 import org.apache.ibatis.annotations.Delete
 import org.apache.ibatis.annotations.Insert
 import org.apache.ibatis.annotations.Mapper

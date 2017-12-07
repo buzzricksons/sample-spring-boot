@@ -18,10 +18,9 @@ import javax.sql.DataSource;
 
 @Configuration
 @EnableTransactionManagement
-@MapperScan("com.example.demo.mapper")
-@ComponentScan("com.example.demo")
+@MapperScan("example.mybatis.mapper")
+@ComponentScan("example")
 public class SetupApplicationPersistenceConfig {
-
     @Qualifier("dataSource")
     @Autowired
     private DataSource dataSource;

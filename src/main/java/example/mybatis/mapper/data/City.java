@@ -1,4 +1,4 @@
-package example.mybatis;
+package example.mybatis.mapper.data;
 
 import lombok.*;
 

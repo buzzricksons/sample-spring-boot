@@ -33,7 +33,7 @@ dependencies {
 	compile('com.zaxxer:HikariCP:2.6.3')
 	compile('org.mybatis:mybatis:3.4.5')
 	runtime('org.springframework.boot:spring-boot-devtools')
-	runtime('org.postgresql:postgresql')
+//	runtime('org.postgresql:postgresql')
 	compileOnly('org.projectlombok:lombok')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	testCompile('org.springframework.security:spring-security-test')

@@ -4,5 +4,6 @@ spring boot sample for study.
 ## ORM
 - Mybatis + Groovy Mapper
 
-## ETC
-- Flyway db migration
+# Used library
+- Flyway(Db migration)
+- Lombok

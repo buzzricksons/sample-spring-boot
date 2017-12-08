@@ -1,9 +1,16 @@
 # Sample for Spring Boot
 spring boot sample for study.
 
-## ORM
-- Mybatis + Groovy Mapper
+## Mybatis
+- src/main/java/example/mybatis
+- src/main/groovy/example_data
+
+## Mathematics
+- src/main/java/example/mathematics
+
+## Security
+- src/main/java/example/security
 
 # Used library
 - Flyway(Db migration)
-- Lombok
+- lombok

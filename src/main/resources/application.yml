@@ -24,7 +24,7 @@ thymeleaf:
 
 # For all example
 error:
-  message: ERROR
+  message: ERROR!!
 
 # For security example
 security:

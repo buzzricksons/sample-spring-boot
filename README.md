@@ -1,5 +1,5 @@
-# Example for Spring Boot
-spring boot example for study.
+# Example for Spring Boot 1.5
+spring boot 1.5 example for study.
 
 ## Mybatis
 - src/main/java/example/mybatis
